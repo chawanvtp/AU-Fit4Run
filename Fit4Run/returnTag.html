@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Return Tag</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/returntag_icon_Q8Z_icon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+	<script src="scripts/admin/returnTag.js"></script>
+	<style> .enjoy-css {
+		display: inline-block;
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+		float: right;
+		border: 4px solid;
+		-webkit-border-radius: 10px;
+		width: 100%;
+		border-radius: 10px;
+		font: italic normal normal 23px/1 Arial Black, Gadget, sans-serif;
+		color: #FFFFFF;
+		text-align: center;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		background: rgba(71,168,26,1);
+		-webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+		box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+		text-shadow: 0 1px 1px rgba(40,40,40,0.7) ;
+		-webkit-transition: font-size 200ms cubic-bezier(0.19, 1, 0.22, 1) 10ms;
+		-moz-transition: font-size 200ms cubic-bezier(0.19, 1, 0.22, 1) 10ms;
+		-o-transition: font-size 200ms cubic-bezier(0.19, 1, 0.22, 1) 10ms;
+		transition: font-size 200ms cubic-bezier(0.19, 1, 0.22, 1) 10ms;
+	  }
+	  p{
+		color: #FFFFFF;
+		font-size: 1em;
+	  }</style>
+
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/img-01.jpg');">
+			<div class="wrap-login100 p-t-190 p-b-30">
+				
+				
+					<div class="login100-form-avatar">
+						<img src="images/icons/returnTag_icon.png" alt="AVATAR">
+					</div>
+
+					<span id="headTest" class="login100-form-title p-t-20 p-b-45">
+						Return Tag
+					</span>
+<!--
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Tel.Number is required">
+						<input class="input100" type="text" id="telReturn" placeholder="Telephone Number">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-mobile"></i>
+						</span>
+                    </div>
+                -->     
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Tag's code is required">
+                            <input class="input100" type="text" id="tagReturn" placeholder="Your tag's code">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-tag"></i>
+                            </span>
+                    </div>
+                    
+                    <div class="container-login100-form-btn p-t-10">
+                            <input value="Return" type="button" class="login100-form-btn" id="returnButton" 
+                                onclick="returnButtonClicked(document.getElementById('tagReturn').value);">
+                                    
+						</div>
+
+						
+						
+
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="tagList" class="enjoy-css">
+			<br>
+			Username who is using TAG.<br>
+			-----------------<br>
+	</div>
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+
+</body>
+</html>

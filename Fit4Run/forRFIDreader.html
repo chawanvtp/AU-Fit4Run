@@ -1,0 +1,45 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+            <link rel="icon" type="image/png" href="images/icons/sport_5ep_icon.ico"/>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>RFID</title>
+<!--
+Stacked Template
+http://www.templatemo.com/tm-505-stacked
+-->
+        
+        <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+        <script src="scripts/RFIDreader/forRFIDreader.js"></script>
+       <!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body style="background-color:rgb(0, 0, 0); text-align: center;">
+      
+       <!--<input type="submit" value="Update (round count) to DB">
+        <button id="updateButton" onclick="test()">XXX</button>-->
+
+        <h1 id="localAnnounce-bar1" style="background-color:black; text-align: center; color: white; height: 70px; font-size: 70px;">    
+        </h1>
+        <h5 id="localAnnounceDetail-bar1" style="background-color:black; text-align: center; color: white; height: 50px; font-size: 50px;">    
+        </h5>
+        <h1 id="localAnnounce-bar2" style="background-color:black; text-align: center; color: white; height: 70px; font-size: 70px;">    
+        </h1>
+        <h5 id="localAnnounceDetail-bar2" style="background-color:black; text-align: center; color: white; height: 50px; font-size: 50px;">    
+        </h5>
+        <h1 id="localAnnounce-bar3" style="background-color:black; text-align: center; color: yellow; height: 70px; font-size: 100px;">    
+        </h1>
+        
+        <h5 id="localAnnounceDetail-bar3" style="background-color:black; text-align: center; color: yellow; height: 60px; font-size: 50px;">    
+        </h5>
+        
+        <input id="tagID-Box" type="text" style="background-color:black; border-color: black">
+        
+    </body>
+</html>
