@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+  <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/sport_5ep_icon.ico"/>
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <!--===============================================================================================-->	
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/components/radioButton.css">
+  <link rel="stylesheet" type="text/css" href="css/components/selectBox.css">
+  <!--===============================================================================================--> 
+  
+
+    <title>Personal Information</title>
+    <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
+    <!-- Firebase Connection -->
+    
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    
+    
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+    
+<link rel="stylesheet" type="text/css" href="assets/css/bar.css">
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+  </head>
+
+   <!--
+   <header style="font-family: Arial, Helvetica, sans-serif;" id="header" class="alt">
+      <div class="logo"><a href="ranking.html"> Ranking</a> | <a href="registration.html"><span> Sign - up </span></a></div>
+      <a href="#menu"><span>Menu</span></a>
+    </header>
+<nav id="menu">
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ranking.html">Ranking</a></li>
+      <li><a href="registration.html">Sign - Up</a></li>
+    </ul>
+  </nav>
+ -->
+
+
+
+  <body id="page-top">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">FIT 4 RUN</span>
+        <span class="d-none d-lg-block">
+          <!-- Picture Profile -->
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="images/avatar-010.jpg" alt=""> 
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Personal Information</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#record">Record</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#edit">Edit Information</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html">Log out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Personal Info. -->
+    <div class="container-fluid p-0">
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <!-- Name and Surname of runner-->
+          <h1 id="dispName"></h1>
+          <div class="subheading mb-5"><a id="dispGen"></a>, <a id="dispFacul" ></a>
+          </div>
+
+          <!-- Show running's details of runner -->       
+          <div class="container">
+              <table class="table">
+                <thead>
+                  <tr class="text-primary">
+                    <th>Total time (min)</th>
+                    <th>Total round </th>
+                    <th>Average speed (km/hr)</th>
+                  </tr>
+                </thead>
+                <tbody id="personalInfoTab">                  
+                </tbody>
+              </table>
+            </div> 
+        </div>     
+      </section>
+      
+
+      <!-- Show record of runner in each day -->
+      <!--
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Record">
+        <div class="my-auto">
+          <div class="container">
+              <h2>Runner's record</h2> 
+
+              <div class="card ">
+                  <div class="card-header ">
+                      <h4 class="card-title">Running Time</h4>
+                      <p class="card-category">Running time in each day</p>
+                  </div>
+                  <div class="card-body ">
+                      <div id="timeChart" class="ct-chart"></div>
+                  </div>                 
+              </div>
+
+              <div class="card ">
+                  <div class="card-header ">
+                      <h4 class="card-title">Running Distance</h4>
+                      <p class="card-category">Running distance in each day (km)</p>
+                  </div>
+                  <div class="card-body ">
+                      <div id="distChart" class="ct-chart"></div>
+                  </div>            
+              </div>
+
+              <div class="card ">
+                  <div class="card-header ">
+                      <h4 class="card-title">Running Speed</h4>
+                      <p class="card-category">Running speed in each day (mins)</p>
+                  </div>
+                  <div class="card-body ">
+                      <div id="speedChart" class="ct-chart"></div>
+                  </div>                  
+              </div>
+            -->
+            <section class="resume-section p-3 p-lg-5 d-flex d-column" id="record">
+              <table class="table">
+                <thead>
+                  <tr class="text-primary">
+                    <th>Date</th>
+                    <th>Time (min)</th>
+                    <th>Distance (km)</th>
+                    <th>Speed (km/hr)</th>
+                    <th>Burn Calories</th>                   
+                  </tr>
+                </thead>
+                <tbody id="runnerRecTab" class="text-primary">
+                  
+                </tbody>
+              </table>
+            </section>
+
+            </div>
+        </div>
+      </section>
+
+      <!-- Edit Info. -->
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="edit">
+        <div class="my-auto">
+          <h2 class="mb-5">Edit Information</h2>
+          <div class="container">           
+              <form class="form-horizontal" id="editForm">
+                <div class="form-group">
+                  
+                  <!-- Email 
+                  <label class="control-label col-sm-2" for="email">Email:</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                  </div>
+                </div>
+                  -->
+                <!-- Name -->
+                <label class="control-label col-sm-2" for="name">Name:</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="runnerName" placeholder="Enter name" name="runnerName">
+                  </div>                              
+                <!-- Weight -->
+                <label class="control-label col-sm-2" for="weight">Weight:</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="weight" placeholder="Enter Weight" name="weight">
+                  </div>
+                <!-- Height -->
+                <label class="control-label col-sm-2" for="height">Height:</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="height" placeholder="Enter height" name="height">
+                  </div>
+                <!-- Faculty or None for instructor -->
+                <div class="form-group">
+                  <label for="faculty">Faculty:</label>
+                  <select class="form-control" id="faculty">
+                      <option style="color:black">Science and Technology</option>
+                      <option style="color:black">Management and Economics</option>
+                      <option style="color:black">Engineering</option>
+                      <option style="color:black">Arts</option>
+                      <option style="color:black">Communication Arts</option>
+                      <option style="color:black">Architecture and Design</option>
+                      <option style="color:black">Music</option>
+                      <option style="color:black">Lecturer</option>
+                      <option style="color:black">Staff</option>
+                      <option style="color:black">Other</option>                
+                  </select>
+                </div>
+
+                <div>
+                    <label>
+                      <input type="radio" class="option-input radio" id"male" name="gender" value="male" checked />
+                      <span style="color:black">
+                      Male
+                    </span>
+                    </label>
+                    <label>
+                      <input type="radio" class="option-input radio" id="female" name="gender" value="female"/>
+                      <span style="color:black">
+                        Female
+                      </span>
+                    </label>
+                  </div>
+
+                <div class="form-group">        
+                  <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default"  onclick=updateEdit() id="editButton">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+    <script src="js/resume.js"></script>
+    <script src="scripts/user.js"></script>
+    <script src="scripts/display.js"></script>
+    <!--  Chartist Plugin  -->
+    <script src="scripts/chartist.min.js"></script>
+    <!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+    <script src="scripts/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
+  </body>
+
+</html>

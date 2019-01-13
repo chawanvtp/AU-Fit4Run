@@ -1,0 +1,224 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Welcome to [Run-4-Fun] </title>
+<!--
+Stacked Template
+http://www.templatemo.com/tm-505-stacked
+-->
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<!--<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">-->
+<link rel="stylesheet" type="text/css" href="css/components/button.css">
+<!--============================================================================-->
+        <script src="scripts/index.js"></script>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            .datagrid table { border-collapse: collapse; text-align: left; width: 100%; } .datagrid {font: normal 12px/150% Verdana, Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 10px solid #006699; }.datagrid table td, .datagrid table th { padding: 3px 10px; text-align: center; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; color:#FFFFFF; font-size: 15px; font-weight: normal; border-left: 1px solid #0070A8; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #00496B; border-left: 1px solid #E1EEF4;font-size: 18px;font-weight: bold; }.datagrid table tbody .alt td { background: #E1EEF4; color: #00496B; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }.datagrid table tfoot td div { border-top: 1px solid #006699;background: #E1EEF4;} .datagrid table tfoot td { padding: 0; font-size: 12px } .datagrid table tfoot td div{ padding: 2px; }.datagrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }.datagrid table tfoot  li { display: inline; }.datagrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #FFFFFF;background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; }.datagrid table tfoot ul.active, .datagrid table tfoot ul a:hover { text-decoration: none;border-color: #006699; color: #FFFFFF; background: none; background-color:#00557F;}div.dhtmlx_window_active, div.dhx_modal_cover_dv { position: fixed !important; }
+        </style>
+    </head>
+    <body>
+        <header style="background-color:#006699; text-align: center; color: white; height: 30px;">
+         </header>
+      <header style="background-color:#006699; font-size: 2em; font-weight: bold; text-align: center; color: white; height: 50px;">
+        Today Records
+      </header>
+      <!-- Table ID = users-table -->
+      <div class="datagrid"><table id="daily-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Round</th>
+            <th>avg.time</th>
+          </tr>
+        </thead>
+       <!-- <tfoot>
+          <tr><td colspan="4">
+              <div id="paging">
+                <ul>
+                  <li><a href="#"><span>Previous</span></a></li>
+                  <li><a href="#" class="active"><span>1</span></a></li>
+                  <li><a href="#"><span>2</span></a></li>
+                  <li><a href="#"><span>3</span></a></li>
+                  <li><a href="#"><span>4</span></a></li>
+                  <li><a href="#"><span>5</span></a></li>
+                  <li><a href="#"><span>Next</span></a></li>
+                </ul>
+              </div>
+            </tr>
+          </tfoot>-->
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>xxx</td>
+            <td>xxx</td>
+            <td>xxx</td>
+          </tr>
+        <tr class="alt">
+          <td>2</td>
+          <td>xxx</td>
+          <td>xxx</td>
+          <td>xxx</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>xxx</td>
+          <td>xxx</td>
+          <td>xxx</td>
+        </tr>
+        <tr class="alt">
+          <td>4</td>
+          <td>xxx</td>
+          <td>xxx</td>
+          <td>xxx</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>xxx</td>
+          <td>xxx</td>
+          <td>xxx</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>xxx</td>
+            <td>xxx</td>
+            <td>xxx</td>
+          </tr>
+        <tr class="alt">
+          <td>7</td>
+          <td>xxx</td>
+          <td>xxx</td>
+          <td>xxx</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>xxx</td>
+          <td>xxx</td>
+          <td>xxx</td>
+        </tr>
+        <tr class="alt">
+          <td>9</td>
+          <td>xxx</td>
+          <td>xxx</td>
+          <td>xxx</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>xxx</td>
+          <td>xxx</td>
+          <td>xxx</td>
+        </tr>
+        </tbody>
+        </table></div>
+
+<!-- TO display the one who get the lastest round -->
+<header style="background-color:black; text-align: center; color: white; height: 30px;">
+  </header>
+<header id="announce-bar" style="background-color:black; text-align: center; color: white; height: 50px;">
+ Display one who just get "the Lastest Round".
+</header>
+
+ <!-- Table ID = daily-table -->
+ <header style="background-color:#006699; text-align: center; color: white; height: 30px;">
+  </header>
+<header style="background-color:#006699; font-size: 2em; font-weight: bold; text-align: center; color: white; height: 60px;">
+ All-Time Records
+</header>
+
+ <div class="datagrid"><table id="users-table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Username</th>
+        <th>round</th>
+        <th>avg.time</th>
+      </tr>
+    </thead>
+ <!--   <tfoot>
+      <tr><td colspan="4">
+          <div id="paging">
+            <ul>
+              <li><a href="#"><span>Previous</span></a></li>
+              <li><a href="#" class="active"><span>1</span></a></li>
+              <li><a href="#"><span>2</span></a></li>
+              <li><a href="#"><span>3</span></a></li>
+              <li><a href="#"><span>4</span></a></li>
+              <li><a href="#"><span>5</span></a></li>
+              <li><a href="#"><span>Next</span></a></li>
+            </ul>
+          </div>
+        </tr>
+      </tfoot>-->
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>xxx</td>
+        <td>xxx</td>
+        <td>xxx</td>
+      </tr>
+    <tr class="alt">
+      <td>2</td>
+      <td>xxx</td>
+      <td>xxx</td>
+      <td>xxx</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>xxx</td>
+      <td>xxx</td>
+      <td>xxx</td>
+    </tr>
+    <tr class="alt">
+      <td>4</td>
+      <td>xxx</td>
+      <td>xxx</td>
+      <td>xxx</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>xxx</td>
+      <td>xxx</td>
+      <td>xxx</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>xxx</td>
+        <td>xxx</td>
+        <td>xxx</td>
+      </tr>
+    <tr class="alt">
+      <td>7</td>
+      <td>xxx</td>
+      <td>xxx</td>
+      <td>xxx</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>xxx</td>
+      <td>xxx</td>
+      <td>xxx</td>
+    </tr>
+    <tr class="alt">
+      <td>9</td>
+      <td>xxx</td>
+      <td>xxx</td>
+      <td>xxx</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>xxx</td>
+      <td>xxx</td>
+      <td>xxx</td>
+    </tr>
+    </tbody>
+    </table></div>
+        <input class="MyButton" type="button" value="Join us !!" onclick="window.location.href='login.html'" />
+    </body>
+</html>

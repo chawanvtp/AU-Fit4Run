@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Registration</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/register_icon_UuX_icon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="css/components/radioButton.css">
+<link rel="stylesheet" type="text/css" href="css/components/selectBox.css">
+<link rel="stylesheet" type="text/css" href="assets/css/bar.css">
+<!--===============================================================================================-->  
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src='scripts/registration.js'></script>
+    
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+<!--===============================================================================================-->
+</head>
+
+      <!-- Head Bar -->
+      <header style="font-family: Arial, Helvetica, sans-serif;" id="header" class="alt">
+            <div class="logo" ><a  href="index.html"> Home </a> | <a href="registration.html"><span> Sign up </span></a></div>
+            <a href="#menu"><span>Menu</span></a>
+          </header>
+          <!-- Nav -->
+			<nav id="menu">
+          <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#indexBar">Ranking</a></li>
+            <li><a href="registration.html">Sign - Up</a></li>
+          </ul>
+        </nav>
+         <!-- _________________________________________ -->
+
+
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/img-01.jpg');">
+			<div class="wrap-login100 p-t-190 p-b-30">
+				<form class="login100-form validate-form">
+					<div class="login100-form-avatar">
+						<img src="images/icons/register_icon.png" alt="AVATAR">
+					</div>
+
+					<span class="login100-form-title p-t-20 p-b-45">
+						Registration
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Displayname is required">
+						<input class="input100" type="text" id="displayNameReg" placeholder="Display Name" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >=97 && event.charCode <= 122)'>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+                    </div>
+                    
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+                            <input class="input100" type="text" id="usernameReg" placeholder="Your ID - ex. u5737444" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >=97 && event.charCode <= 122)'>
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-id-card-o"></i>
+                            </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Height is required">
+                            <input class="input100" type="text" id="heightReg" placeholder="Height - cm." onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-info"></i>
+                            </span>
+                    </div>
+
+
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Weight is required">
+                            <input class="input100" type="text" id="weightReg" placeholder="Weight - kg." onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-info"></i>
+                            </span>
+                    </div>
+                    
+
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Birthday is required">
+                            <input class="input100" type="date" id="bdReg" placeholder="Birthday" min="1950-01-01" max="2555-01-01">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-calendar-plus-o"></i>
+                            </span>
+                    </div>
+
+                    
+                    <div id="mainselection">
+                        <select id="facultyReg">
+                            <option style="color:black">Department / Position</option>
+                            <option style="color:black">Science and Technology</option>
+                            <option style="color:black">Management and Economics</option>
+                            <option style="color:black">Engineering</option>
+                            <option style="color:black">Arts</option>
+                            <option style="color:black">Communication Arts</option>
+                            <option style="color:black">Architecture and Design</option>
+                            <option style="color:black">Music</option>
+                            <option style="color:black">Lecturer</option>
+                            <option style="color:black">Staff</option>
+                            <option style="color:black">Other</option>
+                        </select>
+                      </div>
+
+                    <div>
+                        <label>
+                          <input type="radio" class="option-input radio" id"maleReg" name="gendersReg" value="male" checked />
+                          <span style="color:#FFFFFF">
+                          Male
+                        </span>
+                        </label>
+                        <label>
+                          <input type="radio" class="option-input radio" id="femaleReg" name="gendersReg" value="female"/>
+                          <span style="color:#FFFFFF">
+                            Female
+                          </span>
+                        </label>
+                      </div>
+                    <!--
+                      <span class="login100-form-title p-t-20 p-b-45">
+                            Objective
+                        </span>
+                      
+                      <div id="mainselection">
+                            <select id="preQuestion01">
+                                <option style="color:black">None</option>
+                                <option style="color:black">Health</option>
+                                <option style="color:black">Lose Weight</option>
+                                <option style="color:black">Hobby</option>
+                                <option style="color:black">Treatment</option>
+                                <option style="color:black">Social Activity</option>
+                                <option style="color:black">Other</option>
+                            </select>
+                          </div>
+
+                          <div id="mainselection">
+                                <select id="preQuestion02">
+                                    <option style="color:black">None</option>
+                                    <option style="color:black">One</option>
+                                    <option style="color:black">Two</option>
+                                    <option style="color:black">Three</option>
+                                    <option style="color:black">Above Four</option>
+                                </select>
+                              </div>
+
+                    <div class="container-login100-form-btn p-t-10">
+                    -->
+                        <!--
+                            <button class="login100-form-btn" onclick="signUpButtonClicked()">
+                                Sign up
+                            </button>
+                        -->
+                        <input value="Sign Up" type="button" class="login100-form-btn" id="loginButton" 
+                        onclick="signUpButtonClicked();">
+                        </div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+
+</body>
+</html>
