@@ -46,7 +46,7 @@
       firebase.database().ref("admin").set(null);
       firebase.database().ref("dailyTagsMapUsers").set(null);
       firebase.database().ref("dailyUsersRecords").set(null);
-      firebase.database().ref("ีusers").set(null);
+      firebase.database().ref("users").set(null);
       return alert("RESET SUCCESS !!");
   }
 
